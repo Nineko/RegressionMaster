@@ -20,23 +20,37 @@ namespace RegressionMaster
        
         public void PasteInData(ref DataGridView dgv)
         {
-            this.DebubText.AppendText("PasteInData");
+            this.DebubText.AppendText("PasteInData\n");
             char[] rowSplitter = { '\n', '\r' };  // Cr and Lf.
             char[] columnSplitter = { '\t', ',' };           // Tab. , 
 
             IDataObject dataInClipboard = Clipboard.GetDataObject();
 
-            string stringInClipboard =
-                dataInClipboard.GetData(DataFormats.Text).ToString();
+            string stringInClipboard = dataInClipboard.GetData(DataFormats.Text).ToString();
 
-            string[] rowsInClipboard = stringInClipboard.Split(rowSplitter,
-                StringSplitOptions.RemoveEmptyEntries);
+            string[] rowsInClipboard = stringInClipboard.Split(rowSplitter,StringSplitOptions.RemoveEmptyEntries);
+
+            int ClipboardColsNum = (rowsInClipboard[0].Split(columnSplitter)).Length;
+
 
             int r = dgv.SelectedCells[0].RowIndex;
             int c = dgv.SelectedCells[0].ColumnIndex;
 
+
             if (dgv.Rows.Count < (r + rowsInClipboard.Length))
                 dgv.Rows.Add(r + rowsInClipboard.Length - dgv.Rows.Count);
+            
+
+            if (dgv.ColumnCount < (c+ ClipboardColsNum)) 
+                dgv.ColumnCount = (c + ClipboardColsNum);
+
+            for (int i = 0; i < dgv.ColumnCount; i++)
+            {
+                string NewColName = "Column" + (i+1).ToString();
+                this.DebubText.AppendText("NewColName : " + NewColName + "\n");
+                dataGridView1.Columns[i].Name = NewColName;
+                dataGridView1.Columns[i].HeaderText = NewColName;
+            }
 
             // Loop through lines:
 
@@ -67,7 +81,6 @@ namespace RegressionMaster
 
         private void dataGridView1_KeyPress(object sender, KeyPressEventArgs e)
         {
-            this.DebubText.AppendText("Form1_KeyPress");
             char value = e.KeyChar;
             int key = (int)value;
             if (key != 22)
@@ -77,7 +90,6 @@ namespace RegressionMaster
 
         private void dataGridView2_KeyPress(object sender, KeyPressEventArgs e)
         {
-            this.DebubText.AppendText("Form2_KeyPress");
             char value = e.KeyChar;
             int key = (int)value;
             if (key != 22)

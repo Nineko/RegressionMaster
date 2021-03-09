@@ -1,0 +1,10 @@
+C:\Users\20016\Desktop\Nineko\RegressionMaster\RegressionMaster\bin\Debug\RegressionMaster.exe.config
+C:\Users\20016\Desktop\Nineko\RegressionMaster\RegressionMaster\bin\Debug\RegressionMaster.exe
+C:\Users\20016\Desktop\Nineko\RegressionMaster\RegressionMaster\bin\Debug\RegressionMaster.pdb
+C:\Users\20016\Desktop\Nineko\RegressionMaster\RegressionMaster\obj\Debug\RegressionMaster.Properties.Resources.resources
+C:\Users\20016\Desktop\Nineko\RegressionMaster\RegressionMaster\obj\Debug\RegressionMaster.csproj.GenerateResource.cache
+C:\Users\20016\Desktop\Nineko\RegressionMaster\RegressionMaster\obj\Debug\RegressionMaster.csproj.CoreCompileInputs.cache
+C:\Users\20016\Desktop\Nineko\RegressionMaster\RegressionMaster\obj\Debug\RegressionMaster.exe
+C:\Users\20016\Desktop\Nineko\RegressionMaster\RegressionMaster\obj\Debug\RegressionMaster.pdb
+C:\Users\20016\Desktop\Nineko\RegressionMaster\RegressionMaster\obj\Debug\RegressionMaster.MainForm.resources
+C:\Users\20016\Desktop\Nineko\RegressionMaster\RegressionMaster\obj\Debug\RegressionMaster.csprojAssemblyReference.cache
